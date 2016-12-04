@@ -132,12 +132,9 @@ def list():
             for path in paths:
                 process_path(validfiles, path)
 
-    print('hey')
     for dir in config['recursive']:
         for ext in config['extensions']:
-            print(dir + '/**/*.' + ext, file=sys.stderr)
             for path in glob.iglob(dir + '/**/*.' + ext, recursive=True):
-                print(path, file=sys.stderr)
                 process_path(validfiles, path)
 
     session['grepnumlines'] = str(config['grepnumlines'])

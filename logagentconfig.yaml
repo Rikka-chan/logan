@@ -8,6 +8,10 @@ extensions:
 
 directories:
  - /var/log
- - /Users/jonathan/temp
+
+recursive:
+ - /var/lib/docker/containers
+
+
 
  
